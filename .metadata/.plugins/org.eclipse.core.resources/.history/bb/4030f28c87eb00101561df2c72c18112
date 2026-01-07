@@ -1,0 +1,7 @@
+package spring_intro;
+
+public class Greeting {
+
+	private String message;
+	
+}
