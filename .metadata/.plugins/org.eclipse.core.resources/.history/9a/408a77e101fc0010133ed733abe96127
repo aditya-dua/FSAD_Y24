@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	
+	<bean id="greeting" name="greeting" class="spring_intro.Greeting">
+		<property name="message" value="Hello World from Aditya"></property>
+	</bean>
+	
+	<bean id="address" name = "address" class= "spring_intro.Address">
+		<property name="num" value ="123"></property>
+		<property name="state" value ="Delhi"></property>
+	</bean>
+	
+	<bean id="addressCons" name = "addressCons" scope="prototype" class= "spring_intro.Address">
+		<constructor-arg type="int" value="1234"></constructor-arg>
+	</bean>
+	
+	<bean id="addressCons2" name = "addressCons2" scope="prototype" class= "spring_intro.Address">
+		<constructor-arg index="0" value="1234"></constructor-arg>
+		<constructor-arg index="1" value="Delhi"></constructor-arg>
+		<constructor-arg index="2" value="Delhi"></constructor-arg>
+		
+	</bean>
+
+	<bean id="addressCons3" name = "addressCons3" scope="prototype" class= "spring_intro.Address">
+		<constructor-arg type="java.lang.String" value="Delhi"></constructor-arg>
+		
+		<constructor-arg type="int" value="1234"></constructor-arg>
+				<constructor-arg type="java.lang.String" value="Delhi"></constructor-arg>
+		
+	</bean>
+
+</beans>

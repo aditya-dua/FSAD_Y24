@@ -1,0 +1,10 @@
+package spring_intro;
+
+import java.util.List;
+
+public class DICollections {
+	
+	List nameList;
+	
+
+}

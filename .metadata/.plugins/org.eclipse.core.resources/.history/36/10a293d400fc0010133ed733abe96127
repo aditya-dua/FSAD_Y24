@@ -1,0 +1,31 @@
+package spring_intro;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class SpringMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ApplicationContext context=
+				new ClassPathXmlApplicationContext("spring-config.xml");
+		Greeting greet = (Greeting) context.getBean("greeting");
+		
+		greet.display();
+		
+		Address add= (Address) context.getBean("address");
+		add.display();
+		
+		Address add1= (Address) context.getBean("address");
+		add1.display();
+		
+		
+		Address addC= (Address) context.getBean("addressCons");
+		addC.display();
+		
+		Address addC1= (Address) context.getBean("addressCons");
+		addC1.display();
+	}
+
+}

@@ -1,0 +1,10 @@
+package spring_intro;
+
+public class Address {
+
+	private int num;
+	private String city;
+	private String state;
+	
+	
+}
