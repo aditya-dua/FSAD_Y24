@@ -1,0 +1,7 @@
+
+You are a FE developer for a travel company and are working to create a to do list
+
+1. Create a HTML Page with basic HTML Inputs - Task, priority
+2. Take the react dependencies
+3. Add the script with babel
+4. Create the element in the react and add it back to the To do List

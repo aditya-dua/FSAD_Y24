@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <title> React State Example Page </title>
+
+    <body>
+        <div> Basic HTML in Action</div>
+        <div id="app">
+            <!-- Import React -->
+            <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+            <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+            
+        </div>
+        <script type="text/babel">
+            
+            class Greeting extends React.Component{
+                constructor(){
+                    super();
+                    this.state={name:"Aditya"}
+                }
+                render (){
+                    return <h1> Hello {this.state.name} </h1>
+                }
+            }
+           
+            
+            ReactDOM.render(<Greeting/>,document.getElementById("app"))
+        </script>
+    </body>
+</html>
