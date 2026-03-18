@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <title>Hooks Example - useEffect Hooks</title>
+
+    <body>
+        <div> Basic HTML in Action</div>
+        <div id="app">
+            <!-- Import React -->
+            <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+            <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+            <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+            
+        </div>
+        <script type="text/babel">
+
+            function useInterval(){
+                const [second, setSecond] = React.useState(0);
+
+                React.useEffect(()=>{
+                    const timerId = setInterval(()=>setSecond(s=>s+1),1000);
+                    return () => clearInterval(timerId);
+                },[])
+                return second;
+            }
+
+            function Greeting(props){
+                const second = useInterval({initialTime:0,interval:1000});
+
+                return <h1> Seconds Elapsed : {second} </h1>
+            }
+            ReactDOM.render(<Greeting/>,document.getElementById("app"))
+        </script>
+    </body>
+</html>
