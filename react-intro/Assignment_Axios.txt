@@ -1,0 +1,19 @@
+Create an app in SB which has the following functionality to perform:
+
+User:
+1. Name
+2. Age
+3. Address
+4. Phone Number
+5. Email
+6. Id
+
+Methods:
+1. Create
+2. Update
+3. Delete
+4. GET
+    4.1 Get All
+    4.2 Get By Id
+
+Integrate this data with React by calling the AXIOS Library
